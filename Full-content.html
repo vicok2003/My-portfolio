@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./Full-content.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+</head>
+
+  
+<body>
+    <!-- Content container for Box 1 -->
+<div class="box" id="box1-content" style="display: none;">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet ultricies turpis eget ullamcorper. Nullam non tellus a nulla sodales fermentum. Fusce vehicula nisi nec erat commodo, eget efficitur magna sodales. Vivamus malesuada tincidunt eros, id vehicula dolor volutpat sit amet.</p>
+  </div>
+  
+  <!-- Content container for Box 2 -->
+  <div class="box" id="box2-content" style="display: none;">
+    <p>Proin vestibulum risus vel urna gravida, non consequat neque aliquet. Duis eleifend enim et tortor cursus, sed tempus odio faucibus. Nulla facilisi. Etiam id nisl id nulla consequat malesuada. Integer ut velit orci. Donec auctor quam et elit rhoncus, at ultricies velit vehicula.</p>
+  </div>
+  
+  <!-- Content container for Box 3 -->
+  <div class="box" id="box3-content" style="display: none;">
+    <p>Nunc congue sapien eu dui cursus, a ultricies odio ullamcorper. Mauris in odio vitae dui consectetur posuere in in felis. Nam eu tellus nec mauris accumsan ultricies. Sed ac tristique ipsum. Aliquam a tortor leo. Vivamus volutpat vitae quam nec vestibulum.</p>
+  </div>
+  
+  <!-- Script to handle showing the relevant content -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get the hash identifier from the URL
+      const hash = window.location.hash;
+  
+      // Show the corresponding content based on the hash
+      if (hash === '#box1') {
+        document.getElementById('box1-content').style.display = 'block';
+      } else if (hash === '#box2') {
+        document.getElementById('box2-content').style.display = 'block';
+      } else if (hash === '#box3') {
+        document.getElementById('box3-content').style.display = 'block';
+      }
+    });
+  </script>
+  
+</body>
+</html>
