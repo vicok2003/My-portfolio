@@ -58,3 +58,52 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1000,
     loop: true
 });
+
+
+
+// form validation
+const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission for now
+
+    // Get form field values
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const number = document.getElementById('number').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    // Validation checks
+    if (name === '' || email === '' || number === '' || subject === '' || message === '') {
+        alert('Please fill in all fields.');
+        return; // Prevent form submission if any field is empty
+    }
+
+    // Email validation using a simple regular expression
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return; // Prevent form submission for an invalid email
+    }
+
+    // Mobile number validation (you can add more specific checks if needed)
+    if (isNaN(number) || number.length !== 11) {
+        alert('Please enter a valid 11-digit mobile number.');
+        return; // Prevent form submission for an invalid number
+    }
+
+    // If all validations pass, you can proceed with form submission
+    const formData = {
+        name: name,
+        email: email,
+        number: number,
+        subject: subject,
+        message: message
+    };
+
+    console.log('Form submitted:', formData);
+
+
+    form.reset();
+});

@@ -24,6 +24,11 @@
     <p>Nunc congue sapien eu dui cursus, a ultricies odio ullamcorper. Mauris in odio vitae dui consectetur posuere in in felis. Nam eu tellus nec mauris accumsan ultricies. Sed ac tristique ipsum. Aliquam a tortor leo. Vivamus volutpat vitae quam nec vestibulum.</p>
   </div>
   
+  <!-- Content container for Box 3 -->
+  <div class="box" id="box4-content" style="display: none;">
+    <p>book congue sapien eu dui cursus, a ultricies odio ullamcorper. Mauris in odio vitae dui consectetur posuere in in felis. Nam eu tellus nec mauris accumsan ultricies. Sed ac tristique ipsum. Aliquam a tortor leo. Vivamus volutpat vitae quam nec vestibulum.</p>
+  </div>
+  
   <!-- Script to handle showing the relevant content -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -37,6 +42,8 @@
         document.getElementById('box2-content').style.display = 'block';
       } else if (hash === '#box3') {
         document.getElementById('box3-content').style.display = 'block';
+      } else if (hash === '#box4') {
+        document.getElementById('box4-content').style.display = 'block';
       }
     });
   </script>
