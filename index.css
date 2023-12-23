@@ -70,10 +70,10 @@ section{
     color: var(--main-color);
 }
 
-/* not working */
-.act{
+.navbar a.active {
     color: var(--main-color);
 }
+
 
 #menu-icon{
     font-size: 3.6rem;
