@@ -107,3 +107,15 @@ form.addEventListener('submit', function(event) {
 
     form.reset();
 });
+
+
+var sun = document.getElementById("sun");
+
+sun.onclick = function() {
+    document.body.classList.toggle("light-theme");
+    if(document.body.classList.contains("light-theme")){
+        sun.src="./Assets/icons8-moon-50.png";
+    } else {
+        sun.src="./Assets/icons8-sun-50.png";
+    }
+}
