@@ -48,11 +48,11 @@ body{
 
 
 .technical-bars .bar{
-margin: 40px 0;
+    margin: 40px 0;
 }
 
 .technical-bars .bar:first-child{
-margin-top: 0;
+    margin-top: 0;
 }
 
 .technical-bars .bar:last-child{
@@ -248,7 +248,7 @@ margin-top: 0;
     opacity: 0;
 }
 
-.progress-bar .text{
+.text{
     width: 100%;
     position: absolute;
     text-align: center;
@@ -275,11 +275,61 @@ margin-top: 0;
 
     .container1{
         width: 100%;
+        padding: 2em 1em;
     }
 
     .technical-bars{
         width: 100%;
-        border: 1px solid #f00;
+    }
+
+    .radial-bars{
+        width: 100%;
+    }
+}
+
+@media (max-width: 365px) {
+    .heading{
+        padding: 1em 0;
+        text-align: center;
+    }
+
+    .skills{
+        display: block;
+        width: 100%;
+    }
+
+    .container1{
+        width: 100%;
+        padding: 2em 1em;
+    }
+
+    .technical-bars{
+        width: 100%;
+    }
+
+    .radial-bars{
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .heading{
+        padding: 1em 0;
+        text-align: center;
+    }
+
+    .skills{
+        display: block;
+        width: 100%;
+    }
+
+    .container1{
+        width: 100%;
+        padding: 2em 1em;
+    }
+
+    .technical-bars{
+        width: 100%;
     }
 
     .radial-bars{
