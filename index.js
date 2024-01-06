@@ -50,6 +50,7 @@ ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact 
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 ScrollReveal().reveal('.social-media', { origin: 'right' });
+ScrollReveal().reveal('.btn', { origin: 'bottom' });
 
 // autotyping js
 const typed = new Typed('.multiple-text', {
@@ -64,6 +65,7 @@ const typed = new Typed('.multiple-text', {
 
 // form validation
 const form = document.getElementById('contact-form');
+const celebrationElement = document.getElementById('celebration');
 
 form.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission for now
@@ -103,13 +105,36 @@ form.addEventListener('submit', function(event) {
         message: message
     };
 
-    console.log('Form submitted:', formData);
+
+       // Send form data to Formspree endpoint using fetch
+       fetch('https://formspree.io/f/xyyrylkd', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+    })
+    .then(response => {
+        if (response.ok) {
+            celebrationElement.style.display = 'block';
+            celebrationElement.classList.add('celebrate');
+            setTimeout(() => {
+                celebrationElement.style.display = 'none';
+            }, 20000); 
+            form.reset();
+        } else {
+            throw new Error('Form submission failed.');
+        }
+    })
+    .catch(error => {
+        window.alert('Form submission failed.');
+        console.error('Error:', error);
+    });
+
+    });
 
 
-    form.reset();
-});
-
-
+// day/night toggle
 var sun = document.getElementById("sun");
 
 sun.onclick = function() {
