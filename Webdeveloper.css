@@ -19,8 +19,58 @@ body{
     background-color: var(--background-color);
 }
 
-.heading {text-align: center; font-size: 3em; padding: 1.3em 0;}
-.heading span{color: var(#0ef);}
+.back{
+    padding: 2em 0 0.7em 2em;
+}
+
+.back a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    text-decoration: none;
+    background: transparent;
+    border: .2rem solid var(--progress-line);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--progress-line);
+    /* margin: 1em 0.5em 0; */
+    transition: .5s ease;
+}
+
+.bx{
+   font-size: 0.8em;
+}
+
+.back a:hover{
+    background: var(--progress-line);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--progress-line);
+}
+
+.description-web{
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid #f00; */
+    padding: 2em;
+}
+
+.description-web p{
+    background-color: var(--second-bg-color);
+    padding: 2em;
+    text-align: justify;
+    line-height: 1.6em;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+.heading {text-align: center; font-size: 3em; padding: 1.8em 0 1.2em;}
+.heading span{color: var(--progress-line);}
 
 .skills{
     display: flex;
@@ -89,7 +139,7 @@ body{
 
 .technical-bars .bar .progress-line span {
     height: 100%;
-    background-color: var(--progress-line);
+    /* background-color: var(--progress-line); */
     position: absolute;
     border-radius: 10px;
     animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
@@ -99,15 +149,19 @@ body{
 
 .progress-line.html span{
     width: 90%;
+    background-color: #c95d2e;
 }
 .progress-line.css span{
     width: 70%;
+    background-color: #147bbc;
 }
 .progress-line.javascript span{
     width: 80%;
+    background-color: #b0bc1e;;
 }
 .progress-line.react span{
     width: 75%;
+    background-color: #69bcbc;
 }
 
 .progress-line span::after{
@@ -261,6 +315,47 @@ body{
     opacity: 0;
 }
 
+
+h3{
+    text-align: center;
+    padding-top: 2em;
+    text-decoration: underline;
+}
+
+.social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.6em;
+}
+
+.social-media a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.8rem;
+    height: 2.8rem;
+    text-decoration: none;
+    background: transparent;
+    border: .2rem solid var(--progress-line);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--progress-line);
+    margin: 1em 0.5em 0;
+    transition: .5s ease;
+}
+
+.social-media a:hover{
+    background: var(--progress-line);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--progress-line);
+}
+
+footer p{
+    text-align: center;
+    padding-bottom: 2em;
+}
+
 @media (max-width: 390px) {
 
     .heading{
@@ -284,6 +379,17 @@ body{
 
     .radial-bars{
         width: 100%;
+    }
+
+    .description-web{   
+        display: block;
+        width: 100%;
+        padding: 1.2em ;
+    }
+
+    .description-web p{
+        text-align: left;
+        padding: 1em;
     }
 }
 

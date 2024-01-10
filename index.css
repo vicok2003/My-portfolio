@@ -28,13 +28,18 @@
 
 html{
     font-size: 62.5%;
-    overflow-x: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
+
 
 body{
     background: var(--bg-color);
     color: var(--text-color);
     margin-bottom: 0;
+    padding-bottom: 0;
+    height: 100%;
 }
 
 section{
@@ -191,7 +196,7 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 8rem;
     background: var(--second-bg-color);
 }
 
@@ -218,104 +223,6 @@ span{
     margin: 2rem 0 3rem;
     line-height: 1.6em;
 }
-
-
-/* .skills{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.container1{
-    width: 600px;
-    height: 500px;
-    padding: 75px 90px;
-    margin-left: 120px;
-}
-
-.heading1{
-    text-align: center;
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    text-decoration-thickness: 5px;
-    margin-bottom: 50px;
-}
-
-.bar{
-    font-size: 23px;
-}
-
-.technical-bars .bar{
-    margin-top: 40px 0px;
-}
-
-.technical-bars .bar:first-child{
-    margin-top: 0;
-}
-
-.technical-bars .bar:last-child{
-    margin-bottom: 0;
-}
-
-.technical-bars .bar .info{
-    margin-bottom: 5px;
-}
-
-.technical-bars .bar .info span{
-    font-size: 17px;
-    font-weight: 500;
-    animation: showText 0.5s 1s linear forwards;
-    opacity: 0;
-}
-
-.technical-bars .bar .progress-line {
-    position: relative;
-    border-radius: 10px;
-    width: 100%;
-    height: 5px;
-    background-color: #000;
-    animation: animate 1s cubic-bezier(1,0,0,5,1) forwards;
-    transform: scaleX(0);
-    transform-origin: left;
-}
-
-@keyframes animate {
-    100%{
-        transform: scaleX(1);
-    }
-}
-
-.technical-bars .bar .progress-line span {
-    height: 100%;
-    background-color: #0ef;
-    position: absolute;
-    border-radius: 10px;
-    animation: animate 1s 1s cubic-bezier(1,0,0,5,1) forwards;
-    transform: scaleX(0);
-    transform-origin: left;
-}
-
-
-.progress-line.html span{
-    width: 90%;
-}
-.progress-line.css span{
-    width: 60%;
-}
-.progress-line.javascript span{
-    width: 85%;
-}
-.progress-line.react span{
-    width: 75%;
-} */
-
-
-
-
-
-
-
-
-
 
 .services h2{
     margin-bottom: 5rem;
